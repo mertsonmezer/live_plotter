@@ -1,7 +1,7 @@
 """
-data_generator.py is a Python file that generates random coordinates (t, y) with the frequency
+data_generator.py is a Python file that generates random coordinates (x, y) with the frequency
 of <frequency>, and it stores these coordinates in a SQLite database which is created in the
-path of <pathOfDb>. The t value in a coordinate stands for the time, and the y value stands for
+path of <pathOfDb>. The x value in a coordinate stands for the time, and the y value stands for
 a random float between the <low> and <high> variables.
 """
 
@@ -65,7 +65,7 @@ high = int(input("The highest boundary: "))
 dbs = list()
 for i in range(numberOfDb):
     name = "db_" + str(i) + ".db"
-    pathOfDb = path + "/databases/" + name
+    pathOfDb = path + '\\' + name
 
     conn = create_connection(pathOfDb)
     create_coordinate_table(conn)
